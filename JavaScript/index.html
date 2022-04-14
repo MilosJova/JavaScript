@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krug_zadatak</title>
+  </head>
+  <body>
+    <script>
+      function Krug(){
+        var wolf, povrsina, obim, polukrug, p_rezultat, o_rezultat, click,d_open, d_closed;
+        
+        d_open ="<div class='wolf_pack'>";
+          click = "<p onclick='Krug()'><strong>Klik ovdje za drugi proracun !!!<strong></p>";
+        d_closed = "</div>";
+        
+       
+      
+        wolf = prompt("Unesi radijus kruga:");
+        wolf = parseInt(wolf);
+        const PI = 3.14;
+  
+  
+          if((wolf != 0) && (wolf > 0)){
+            obim = wolf*2*PI;
+            povrsina = wolf*wolf*PI;
+            polukrug = wolf*wolf*PI/2;
+           
+            p_rezultat = "<h1>Povrsina kruga: " + povrsina + "</h1>";
+            o_rezultat = "<h2> Obim kruga : " + obim + "</h2>";
+            pk_rezultat = "<h2> Polukrug : " + polukrug + "</h2>";
+
+           document.write(d_open, d_closed, p_rezultat, o_rezultat, pk_rezultat, click);
+            
+          }
+      }
+      Krug();
+    </script>
+  </body>
+</html>
